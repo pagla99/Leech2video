@@ -54,7 +54,7 @@ if __name__ == "__main__" :
     #
     incoming_message_handler = MessageHandler(
         incoming_message_f,
-        filters=Filters.command(["leech@Uploadasvideorobot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["leechvideo@Uploadasvideorobot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_message_handler)
     #
@@ -66,7 +66,7 @@ if __name__ == "__main__" :
     #
     incoming_youtube_dl_handler = MessageHandler(
         incoming_youtube_dl_f,
-        filters=Filters.command(["ytdl@Uploadasvideorobot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["ytdlvideo@Uploadasvideorobot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_youtube_dl_handler)
     #
@@ -125,13 +125,13 @@ if __name__ == "__main__" :
     #
     save_thumb_nail_handler = MessageHandler(
         save_thumb_nail,
-        filters=Filters.command(["savethumbnail@Uploadasvideorobot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["savethumbnailvideo@Uploadasvideorobot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(save_thumb_nail_handler)
     #
     clear_thumb_nail_handler = MessageHandler(
         clear_thumb_nail,
-        filters=Filters.command(["clearthumbnail@Uploadasvideorobot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["clearthumbnailvideo@Uploadasvideorobot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(clear_thumb_nail_handler)
     #
