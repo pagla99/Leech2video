@@ -22,7 +22,7 @@ from tobrot import (
 async def new_join_f(client, message):
     chat_type = message.chat.type
     if chat_type != "private":
-        await message.reply_text(f"Current CHAT ID: <code>{message.chat.id}</code>")
+        await message.reply_text(f"Only For HB4All")
         # leave chat
         await client.leave_chat(
             chat_id=message.chat.id,
@@ -38,7 +38,7 @@ async def help_message_f(client, message):
     message_id = 99
     # display the /help message
     await message.reply_text(
-        f"Welcome2hb4all",
+        f"",
         quote=True
     )
 
@@ -47,13 +47,13 @@ async def rename_message_f(client, message):
     inline_keyboard = []
     inline_keyboard.append([
         pyrogram.InlineKeyboardButton(
-            text="read this?",
-            url="https://t.me/keralagram/698909"
+            text="More",
+            url="https://t.me/hb4all_bot"
         )
     ])
     reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
     await message.reply_text(
-        "please use @renamebot",
+        "please use @rename_ro_bot",
         quote=True,
         reply_markup=reply_markup
     )
